@@ -8,7 +8,9 @@ namespace Program
         {
             LogicAND and1 = new LogicAND("and-1");
             and1.AgregarEntrada("entrada 1", 1);
-            and1.AgregarEntrada("entrada 2", 0);
+            and1.AgregarEntrada("entrada 2", 1);
+
+            
 
             
             LogicOr or1 = new LogicOr("or-1");
@@ -17,6 +19,8 @@ namespace Program
 
             LogicNot not1= new LogicNot("not-1");
             not1.AgregarEntrada("entrada 1",or1);
+            not1.AgregarEntrada("entrada 2",1);
+
 
             
              Console.WriteLine("Salida: " + not1.CalcularSalida());

@@ -17,7 +17,7 @@ public class LogicAND : Compuertas
     public override int CalcularSalida()
     {
         int salida = 1;
-        
+        ValidarEntradas();
         foreach (var entrada in Entradas.Values){
             Console.WriteLine(this.Name + " entrada: " + entrada);
            salida = salida * entrada;

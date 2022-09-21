@@ -14,10 +14,19 @@ namespace LogicGates
         {
             return this.Name;
         }
+        new public void ValidarEntradas()
+        {   
+            
+            if(Entradas.Values.Count()>1)
+            {
+                throw new InvalidEntries("El numero de entradas es incorrecto.");
+            }
+        }
 
         public override int CalcularSalida()
         {
             int salida=1;
+            ValidarEntradas();
             
             foreach(var entrada in Entradas.Values)
             {

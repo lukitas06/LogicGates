@@ -19,6 +19,7 @@ namespace LogicGates
         public override int CalcularSalida()
         {
             int salida=0;
+            ValidarEntradas();
             if(Entradas.Values.Contains(1))
             {
                 salida=1;
