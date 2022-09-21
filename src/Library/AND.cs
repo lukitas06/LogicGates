@@ -1,15 +1,30 @@
-﻿namespace logicGates
+﻿using System;
+
+
+namespace LogicGates
 {
-public class LogicAND
+public class LogicAND : Compuertas
 {   
-    public string Name{get;}
+    private string Name;
     public LogicAND(string name){
         this.Name=name;
     }
-    public void AgregarEntrada(string name, int value){
-        string[] entradas={} ;
+
+    public string getNombre(){
+        return this.Name;
     }
 
+    public override int CalcularSalida()
+    {
+        int salida = 1;
+        
+        foreach (var entrada in Entradas.Values){
+            Console.WriteLine(this.Name + " entrada: " + entrada);
+           salida = salida * entrada;
+        }
+
+        return salida;
+    }
 }
 
 }
